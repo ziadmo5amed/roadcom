@@ -92,46 +92,67 @@ const Info = () => {
         <h2 className="text-3xl md:text-5xl font-extrabold text-pink-400 mb-10 inline-block pb-2">
           أهدافنا
         </h2>
-        <ul className="space-y-6 text-center text-xl md:text-2xl font-medium">
-          <li className="flex flex-row-reverse items-start gap-3">
-            <span className="w-3 h-3 mt-2 bg-purple-600 rounded-full"></span>
-            تدريب{" "}
-            <span className="text-pink-600 font-bold">100,000 شاب وشابة</span> في
-            مختلف المجالات التقنية بحلول عام 2030
-          </li>
-          <li className="flex flex-row-reverse items-start gap-3">
-            <span className="w-3 h-3 mt-2 bg-pink-500 rounded-full"></span>
-            إقامة{" "}
-            <span className="text-pink-600 font-semibold">
-              ورش عمل ومعسكرات تكنولوجية عملية
-            </span>{" "}
-            على مستوى الجامعات والمدارس
-          </li>
-          <li className="flex flex-row-reverse items-start gap-3">
-            <span className="w-3 h-3 mt-2 bg-purple-500 rounded-full"></span>
-            دعم{" "}
-            <span className="text-pink-600 font-bold">
-              الابتكار الطلابي وريادة الأعمال التقنية
-            </span>
-            .
-          </li>
-          <li className="flex flex-row-reverse items-start gap-3">
-            <span className="w-3 h-3 mt-2 bg-pink-500 rounded-full"></span>
-            بناء شبكة قوية من{" "}
-            <span className="text-pink-600 font-semibold">
-              الشباب المبدع والخبراء والشركاء
-            </span>
-            .
-          </li>
-          <li className="flex flex-row-reverse items-start gap-3">
-            <span className="w-3 h-3 mt-2 bg-purple-600 rounded-full"></span>
-            ربط المتدربين بـ{" "}
-            <span className=" text-pink-600 font-bold">
-              فرص تدريبية ووظيفية حقيقية
-            </span>{" "}
-            في سوق العمل.
-          </li>
-        </ul>
+        <ul className="space-y-6 text-right text-lg md:text-2xl font-medium">
+  <li className="flex items-start gap-3">
+    
+    <p className="flex-1">
+      تدريب{" "}
+      <span className="text-pink-600 font-bold">100,000 شاب وشابة</span> في
+      مختلف المجالات التقنية بحلول عام 2030
+      _
+    </p>
+  </li>
+
+  <li className="flex items-start gap-3">
+ 
+    <p className="flex-1">
+      إقامة{" "}
+      <span className="text-pink-600 font-semibold">
+        ورش عمل ومعسكرات تكنولوجية عملية
+      </span>{" "}
+      على مستوى الجامعات والمدارس
+      _
+    </p>
+  </li>
+
+  <li className="flex items-start gap-3">
+   
+    <p className="flex-1">
+      دعم{" "}
+      <span className="text-pink-600 font-bold">
+       الابتكار الطلابي وريادة الأعمال التقنية
+        
+      </span>{" "} 
+      _
+    </p>
+  </li>
+
+  <li className="flex items-start gap-3">
+  
+    <p className="flex-1">
+      بناء شبكة قوية من{" "}
+      <span className="text-pink-600 font-semibold">
+        الشباب المبدع والخبراء والشركاء
+        
+      </span>{" "} 
+       _
+    </p>
+  </li>
+
+  <li className="flex items-start gap-3">
+  
+    <p className="flex-1">
+      
+      ربط المتدربين بـ{" "}
+      <span className=" text-pink-600 font-bold">
+        فرص تدريبية ووظيفية حقيقية
+      </span>{" "}
+      في سوق العمل
+      _
+    </p>
+  </li>
+</ul>
+
       </motion.div>
     </section>
   );
