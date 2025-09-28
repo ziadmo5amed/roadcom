@@ -1,18 +1,19 @@
 import React from "react";
-import Hyperspeed from "./Hyperspeed";
+ import Orb from "./Orb ";
+
 
 const Header = () => {
   return (
     <div>
       <div className="relative overflow-hidden min-h-[500px] max-h-[500px] w-full  bg-blue-950">
-        {/* الخلفية الانيميشن */}
-        <Hyperspeed
-          count={200}
-          gravity={0.7}
-          friction={0.8}
-          wallBounce={0.95}
-          followCursor={true}
-        />
+       <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+  <Orb
+    hoverIntensity={0.5}
+    rotateOnHover={true}
+    hue={0}
+    forceHoverState={false}
+  />
+</div>
 
         {/* النص في المنتصف بدون أنيميشن */}
         <div className="absolute z-10 text-xl font-extrabold text-center text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:text-5xl">
