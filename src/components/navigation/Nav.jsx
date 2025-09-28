@@ -67,46 +67,47 @@ const Nav = () => {
         </button>
       </div>
 
-      {/* Mobile animated menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
+{/* Mobile animated menu */}
+<AnimatePresence>
+  {isOpen && (
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      variants={menuVariants}
+      transition={{ duration: 0.3 }}
+      className="fixed top-20 left-0 w-full bg-pink-800/95 z-40 md:hidden"
+    >
+      <motion.ul
+        className="mt-8 px-6 py-4 shadow-lg flex flex-col items-stretch space-y-3"
+        role="menu"
+        aria-label="Mobile menu"
+        initial={{ opacity: 0, y: -6 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -6 }}
+        transition={{ duration: 0.3 }}
+      >
+        {links.map((link, i) => (
+          <motion.li
+            key={link}
+            custom={i}
+            variants={itemVariants}
             initial="hidden"
             animate="visible"
-            exit="exit"
-            variants={menuVariants}
-            transition={{ duration: 0.3 }}
-            className="md:hidden"
+            className="px-5 py-3 relative text-white group cursor-pointer rounded-md border-b-2"
+            onClick={() => setIsOpen(false)}
           >
-            <motion.ul
-              className="mx-4 mt-3 rounded-lg bg-black/95 py-4 shadow-lg flex flex-col items-stretch space-y-2"
-              role="menu"
-              aria-label="Mobile menu"
-              initial={{ opacity: 0, y: -6 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -6 }}
-              transition={{ duration: 0.3 }}
-            >
-              {links.map((link, i) => (
-                <motion.li
-                  key={link}
-                  custom={i}
-                  variants={itemVariants}
-                  initial="hidden"
-                  animate="visible"
-                  className="px-5 py-3 relative text-white group cursor-pointer rounded-md"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <span className="transition-colors duration-300 group-hover:text-blue-400">
-                    {link}
-                  </span>
-                  <span className="absolute left-0 bottom-1 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
-                </motion.li>
-              ))}
-            </motion.ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <span className="transition-colors duration-300 group-hover:text-blue-400">
+              {link}
+            </span>
+            <span className="absolute left-0 bottom-1 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+          </motion.li>
+        ))}
+      </motion.ul>
+    </motion.div>
+  )}
+</AnimatePresence>
+
     </nav>
   );
 };
