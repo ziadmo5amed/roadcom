@@ -1,24 +1,28 @@
-import React from "react";
+ import React from "react";
 import { motion } from "framer-motion";
+import { FaRobot } from "react-icons/fa";
+import { MdSecurity } from "react-icons/md";
+import { FaGlobe, FaCloud, FaBusinessTime, FaPrint } from "react-icons/fa";
+import { GiRobotGolem } from "react-icons/gi";
 
 const fields = [
-  { icon: "🤖", title: "الذكاء الاصطناعي" },
-  { icon: "🔒", title: "الأمن السيبراني" },
-  { icon: "🌐", title: "إنترنت الأشياء" },
-  { icon: "⚙", title: "الروبوتات" },
-  { icon: "🖨", title: "الطباعة ثلاثية الأبعاد" },
-  { icon: "☁", title: "التخزين السحابي" },
-  { icon: "💼", title: "ريادة الأعمال" },
+  { icon: <FaRobot className="text-6xl text-pink-600" />, title: "الذكاء الاصطناعي" },
+  { icon: <MdSecurity className="text-6xl text-pink-600" />, title: "الأمن السيبراني" },
+  { icon: <FaGlobe className="text-6xl text-pink-600" />, title: "إنترنت الأشياء" },
+  { icon: <GiRobotGolem className="text-6xl text-pink-600" />, title: "الروبوتات" },
+  { icon: <FaPrint className="text-6xl text-pink-600" />, title: "الطباعة ثلاثية الأبعاد" },
+  { icon: <FaCloud className="text-6xl text-pink-600" />, title: "التخزين السحابي" },
+  { icon: <FaBusinessTime className="text-6xl text-pink-600" />, title: "ريادة الأعمال" },
 ];
 
-// إعداد الأنيميشن
 const cardVariants = {
-  hidden: { opacity: 0, y: 50 }, // البداية
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
   visible: (i) => ({
     opacity: 1,
     y: 0,
+    scale: 1,
     transition: {
-      delay: i * 0.2, // يخلي الكروت تظهر ورا بعض
+      delay: i * 0.15,
       duration: 0.6,
       ease: "easeOut",
     },
@@ -30,7 +34,7 @@ export default function FieldsSection() {
     <section className="px-6 py-20 text-white bg-gradient-to-b from-purple-900 to-blue-950 md:px-16 lg:px-24">
       {/* العنوان */}
       <motion.h2
-        className="mb-4 mb-10 font-bold font-extrabold text-center text-pink-400 md:text-5xl"
+        className="mb-10 text-4xl font-extrabold text-center text-pink-400 md:text-5xl"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -49,9 +53,9 @@ export default function FieldsSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            custom={index} // مهم علشان الـ delay يشتغل
+            custom={index}
           >
-            <div className="mb-4 text-5xl">{field.icon}</div>
+            <div className="mb-4">{field.icon}</div>
             <h3 className="mb-6 text-xl font-semibold text-gray-700">
               {field.title}
             </h3>
