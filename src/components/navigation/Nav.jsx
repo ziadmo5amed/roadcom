@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const links = ["Home", "Services", "About", "Contact"];
+  const links = [" عن Tech Pioneer", "المجالات المتاحة", " الأدمن ", "للتواصل"];
 
   // أنميشن للمنيو
   const menuVariants = {
@@ -25,8 +25,8 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-gray-900 text-white px-4 py-3 shadow-md z-50">
-      <div className="container mx-auto flex items-center justify-between">
+    <nav className="z-50 px-4 py-3 text-white bg-gray-900 shadow-md">
+      <div className="container flex items-center justify-between mx-auto">
         {/* اللوجو */}
         <motion.img
           src={logo}
@@ -38,11 +38,11 @@ const Nav = () => {
         />
 
         {/* Desktop links */}
-        <ul className="hidden md:flex space-x-8 items-center">
+        <ul className="items-center hidden space-x-8 md:flex">
           {links.map((link, idx) => (
             <motion.li
               key={idx}
-              className="relative cursor-pointer group text-lg"
+              className="relative text-lg cursor-pointer group"
               variants={itemVariants}
               initial="hidden"
               animate="visible"
@@ -76,10 +76,10 @@ const Nav = () => {
       exit="exit"
       variants={menuVariants}
       transition={{ duration: 0.3 }}
-      className="fixed top-20 left-0 w-full bg-pink-800/95 z-40 md:hidden"
+      className="fixed left-0 z-40 w-full bg-pink-400 top-20 md:hidden"
     >
       <motion.ul
-        className="mt-8 px-6 py-4 shadow-lg flex flex-col items-stretch space-y-3"
+        className="flex flex-col items-stretch px-6 py-4 mt-8 space-y-3 shadow-lg"
         role="menu"
         aria-label="Mobile menu"
         initial={{ opacity: 0, y: -6 }}
@@ -94,7 +94,7 @@ const Nav = () => {
             variants={itemVariants}
             initial="hidden"
             animate="visible"
-            className="px-5 py-3 relative text-white group cursor-pointer rounded-md border-b-2"
+            className="relative px-5 py-3 text-white border-b-2 rounded-md cursor-pointer group"
             onClick={() => setIsOpen(false)}
           >
             <span className="transition-colors duration-300 group-hover:text-blue-400">

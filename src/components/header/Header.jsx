@@ -21,7 +21,7 @@ const Header = () => {
   {/* النص في المنتصف بدون أنيميشن */}
   <div className="absolute z-10 w-full text-2xl font-extrabold text-center text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:text-6xl">
     <h2> 
-      <span className="text-pink-400">Tech Pioneer</span>  مرحبا بكم فى
+    مرحبا بكم فى   <span className="text-pink-400">Tech Pioneer</span>  
     </h2>
   </div>
 </div>
