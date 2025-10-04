@@ -73,6 +73,7 @@ app.get("/", (req, res) => {
   res.send("🚀 السيرفر شغال، استخدم POST /send لإرسال البيانات");
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+// هنا التعديل المهم
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🚀 Server running on http://192.168.1.8:${PORT}`);
 });
