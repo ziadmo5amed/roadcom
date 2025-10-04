@@ -42,7 +42,7 @@ function Form() {
         <h2 className="mb-6 text-2xl font-bold text-center text-purple-700">
           نموذج تسجيل الطلاب
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="m-auto space-y-4">
           <input
             type="text"
             name="name"
