@@ -1,11 +1,13 @@
-import './App.css'
+ 
 import Nav from './components/navigation/Nav';
  
  
-import {Route , Routes , Link} from "react-router-dom";
+// import {Route , Routes , Link, Form} from "react-router-dom";
 import Header from './components/header/Header';
 import  Info  from './components/information/Info';
-import Mgalat from './components/mgalat/Mgalat'
+import Fields  from './components/fields/Fields'
+import Instructor from './components/instructor/Instructor'
+import  Form  from './components/form/Form';
 function App() {
  
   return (
@@ -13,7 +15,9 @@ function App() {
     <Nav />
     <Header />
     <Info />
-    <Mgalat />
+    <Fields />
+    <Instructor />
+    <Form />
  </>
   )
 }

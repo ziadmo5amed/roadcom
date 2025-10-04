@@ -23,7 +23,7 @@ const cardVariants = {
     scale: 1,
     transition: {
       delay: i * 0.15,
-      duration: 0.6,
+      duration: 0.4,
       ease: "easeOut",
     },
   }),
@@ -68,3 +68,4 @@ export default function FieldsSection() {
     </section>
   );
 }
+ 
